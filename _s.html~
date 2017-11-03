@@ -1,0 +1,63 @@
+<main class="cd-main-content">
+    
+    <section class="categories">
+
+	<div class="container-fluid">
+	    <div class="row">
+		<div class="col-sm-12 video-header-archive">
+		    <h3 class="pull-left">Search Results for: olympic</h3>
+		    <div class="streamium-drop-dropdown-wrapper open-to-left">
+			<a class="streamium-drop-dropdown-trigger" href="#0">FILTER</a>
+			<nav class="streamium-drop-dropdown">
+			    <ul class="streamium-drop-dropdown-content">
+				<li><a class="search-search-filter" data-type="day" href="?s=all&date=day">1 Day Ago</a></li>
+				<li><a class="search-search-filter" data-type="week" href="?s=all&date=week">1 Week Ago</a></li>
+				<li><a class="search-search-filter" data-type="2017" href="?s=all&date=2017">2017</a></li>
+				<li><a class="search-search-filter" data-type="2016" href="?s=all&date=2016">2016</a></li>
+				<li><a class="search-search-filter" data-type="2015" href="?s=all&date=2015">2015</a></li>
+				<li><a class="search-search-filter" data-type="2017/10/01" href="?s=all&date=2017/10/01">Oct 2017</a></li>
+				<li><a class="search-search-filter" data-type="2017/09/01" href="?s=all&date=2017/09/01">Sep 2017</a></li>
+				<li><a class="search-search-filter" data-type="2017/08/01" href="?s=all&date=2017/08/01">Aug 2017</a></li>
+				<li><a class="search-search-filter" data-type="2017/07/01" href="?s=all&date=2017/07/01">Jul 2017</a></li>
+				<li><a class="search-search-filter" data-type="2017/06/01" href="?s=all&date=2017/06/01">Jun 2017</a></li>
+				<li><a class="search-search-filter" data-type="2017/05/01" href="?s=all&date=2017/05/01">May 2017</a></li>
+				<li><a class="search-search-filter" data-type="2017/04/01" href="?s=all&date=2017/04/01">Apr 2017</a></li>
+				<li><a class="search-search-filter" data-type="2017/03/01" href="?s=all&date=2017/03/01">Mar 2017</a></li>
+				<li><a class="search-search-filter" data-type="2017/02/01" href="?s=all&date=2017/02/01">Feb 2017</a></li>
+				<li><a class="search-search-filter" data-type="2017/01/01" href="?s=all&date=2017/01/01">Jan 2017</a></li>
+				<li><a class="search-search-filter" data-type="2016/12/01" href="?s=all&date=2016/12/01">Dec 2016</a></li>
+				<li><a class="search-search-filter" data-type="2016/11/01" href="?s=all&date=2016/11/01">Nov 2016</a></li>
+				<li><a class="search-search-filter" data-type="2016/10/01" href="?s=all&date=2016/10/01">Oct 2016</a></li>
+				<li><a class="search-search-filter" data-type="2016/09/01" href="?s=all&date=2016/09/01">Sep 2016</a></li>
+				<li><a class="search-search-filter" data-type="2016/08/01" href="?s=all&date=2016/08/01">Aug 2016</a></li>
+				<li><a class="search-search-filter" data-type="2016/07/01" href="?s=all&date=2016/07/01">Jul 2016</a></li>
+				<li><a class="search-search-filter" data-type="2016/06/01" href="?s=all&date=2016/06/01">Jun 2016</a></li>
+				<li><a class="search-search-filter" data-type="2016/05/01" href="?s=all&date=2016/05/01">May 2016</a></li>
+				<li><a class="search-search-filter" data-type="2016/04/01" href="?s=all&date=2016/04/01">Apr 2016</a></li>
+				<li><a class="search-search-filter" data-type="2016/03/01" href="?s=all&date=2016/03/01">Mar 2016</a></li>
+				<li><a class="search-search-filter" data-type="2016/02/01" href="?s=all&date=2016/02/01">Feb 2016</a></li>
+				<li><a class="search-search-filter" data-type="2016/01/01" href="?s=all&date=2016/01/01">Jan 2016</a></li>
+				<li><a class="search-search-filter" data-type="2015/12/01" href="?s=all&date=2015/12/01">Dec 2015</a></li>
+				<li><a class="search-search-filter" data-type="2015/11/01" href="?s=all&date=2015/11/01">Nov 2015</a></li>
+				<li><a class="search-search-filter" data-type="2015/10/01" href="?s=all&date=2015/10/01">Oct 2015</a></li>
+				<li><a class="search-search-filter" data-type="2015/09/01" href="?s=all&date=2015/09/01">Sep 2015</a></li>
+				<li><a class="search-search-filter" data-type="2015/08/01" href="?s=all&date=2015/08/01">Aug 2015</a></li>
+				<li><a class="search-search-filter" data-type="2015/07/01" href="?s=all&date=2015/07/01">Jul 2015</a></li>
+				<li><a class="search-search-filter" data-type="2015/06/01" href="?s=all&date=2015/06/01">Jun 2015</a></li>
+				<li><a class="search-search-filter" data-type="2015/05/01" href="?s=all&date=2015/05/01">May 2015</a></li>
+				<li><a class="search-search-filter" data-type="2015/04/01" href="?s=all&date=2015/04/01">Apr 2015</a></li>
+				<li><a class="search-search-filter" data-type="2015/03/01" href="?s=all&date=2015/03/01">Mar 2015</a></li>
+				<li><a class="search-search-filter" data-type="2015/02/01" href="?s=all&date=2015/02/01">Feb 2015</a></li>
+				<li><a class="search-search-filter" data-type="2015/01/01" href="?s=all&date=2015/01/01">Jan 2015</a></li>
+			    </ul> <!-- .cd-dropdown-content -->
+			</nav> <!-- .cd-dropdown -->
+		    </div> <!-- .cd-dropdown-wrapper -->
+		</div><!--/.col-sm-12-->
+	    </div><!--/.row-->
+	</div><!--/.container-->
+
+	<div id="search-watched"></div>
+
+    </section><!--/.videos-->
+
+</main><!--/.main content-->

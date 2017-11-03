@@ -1,0 +1,413 @@
+<div id="page_container" class="archive tax-movies term-action term-6">
+
+    
+    <header class="cd-main-header fixed">
+
+	
+	<a class="cd-logo" href="#">
+	    <img src='http://streamiumtheme.com/wp-content/uploads/2017/10/if_woocommerce_1010057-2.png' alt='Streamium'>
+	</a>
+
+	
+	<nav class="cd-nav">
+	    <ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
+
+		
+		
+		
+		<li class="menu-item-has-children">
+		    <a href="http://streamiumtheme.com/">Movies</a>
+		    <ul class="sub-menu is-hidden">
+			<li class="go-back">
+			    <a href="#0">Menu</a>
+			</li>
+			<li class="see-all">
+			    <a href="http://streamiumtheme.com/movie">View All</a>
+			</li>
+
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+				
+
+				<li class="go-back"><a href="#0">Action</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/action/">Action</a></li>
+
+				
+
+				
+
+				<li class="go-back"><a href="#0">British</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/british/">British</a></li>
+
+				
+
+				
+
+				<li class="go-back"><a href="#0">Comedies</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/comedies/">Comedies</a></li>
+
+				
+
+				
+
+				<li class="go-back"><a href="#0">Crime Films</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/crime-films/">Crime Films</a></li>
+
+				
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+				
+
+				<li class="go-back"><a href="#0">Cult Films</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/cult-films/">Cult Films</a></li>
+
+				
+
+				
+
+				<li class="go-back"><a href="#0">Documentaries</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/documentaries/">Documentaries</a></li>
+
+				
+
+				
+
+				<li class="go-back"><a href="#0">Dramas</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/dramas/">Dramas</a></li>
+
+				
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+				
+
+				<li class="go-back"><a href="#0">Horror</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/horror/">Horror</a></li>
+
+				
+
+				
+
+				<li class="go-back"><a href="#0">Independent</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/independent/">Independent</a></li>
+
+				
+
+				
+
+				<li class="go-back"><a href="#0">International</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/international/">International</a></li>
+
+				
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+				
+
+				<li class="go-back"><a href="#0">Sci-Fi</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/sci-fi/">Sci-Fi</a></li>
+
+				
+
+				
+
+				<li class="go-back"><a href="#0">Stand Up</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/stand-up/">Stand Up</a></li>
+
+				
+
+				
+
+				<li class="go-back"><a href="#0">Thriller</a></li>
+				
+				<li><a href="http://streamiumtheme.com/movies/thriller/">Thriller</a></li>
+
+				
+
+			    </ul>
+			</li>
+			
+		    </ul>				
+		</li>
+		
+		
+		
+		
+		<li class="menu-item-has-children">
+		    <a href="http://streamiumtheme.com/">TV Programs</a>
+		    <ul class="sub-menu is-hidden">
+			<li class="go-back">
+			    <a href="#0">Menu</a>
+			</li>
+			<li class="see-all">
+			    <a href="http://streamiumtheme.com/tv">View All</a>
+			</li>
+
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+				
+
+				<li class="go-back"><a href="#0">Box Sets</a></li>
+				
+				<li><a href="http://streamiumtheme.com/programs/box-sets/">Box Sets</a></li>
+
+				
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+				
+
+				<li class="go-back"><a href="#0">Crime</a></li>
+				
+				<li><a href="http://streamiumtheme.com/programs/crime/">Crime</a></li>
+
+				
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+				
+
+				<li class="go-back"><a href="#0">USA</a></li>
+				
+				<li><a href="http://streamiumtheme.com/programs/usa/">USA</a></li>
+
+				
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+			    </ul>
+			</li>
+			
+		    </ul>				
+		</li>
+		
+		
+		
+		
+		<li class="menu-item-has-children">
+		    <a href="http://streamiumtheme.com/">Sport</a>
+		    <ul class="sub-menu is-hidden">
+			<li class="go-back">
+			    <a href="#0">Menu</a>
+			</li>
+			<li class="see-all">
+			    <a href="http://streamiumtheme.com/sport">View All</a>
+			</li>
+
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+				
+
+				<li class="go-back"><a href="#0">Basketball</a></li>
+				
+				<li><a href="http://streamiumtheme.com/sports/basketball/">Basketball</a></li>
+
+				
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+			    </ul>
+			</li>
+			
+		    </ul>				
+		</li>
+		
+		
+		
+		
+		<li class="menu-item-has-children">
+		    <a href="http://streamiumtheme.com/">Kids</a>
+		    <ul class="sub-menu is-hidden">
+			<li class="go-back">
+			    <a href="#0">Menu</a>
+			</li>
+			<li class="see-all">
+			    <a href="http://streamiumtheme.com/kid">View All</a>
+			</li>
+
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+				
+
+				<li class="go-back"><a href="#0">Family</a></li>
+				
+				<li><a href="http://streamiumtheme.com/kids/family/">Family</a></li>
+
+				
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+			    </ul>
+			</li>
+			
+			<li class="menu-item-has-children">
+			    
+			    <ul class="is-hidden">
+
+			    </ul>
+			</li>
+			
+		    </ul>				
+		</li>
+		
+		
+		
+		<li id="menu-item-1290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1290"><a href="http://streamiumtheme.com/uploader/">Uploader</a></li>
+		<li id="menu-item-1271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1271"><a href="http://streamiumtheme.com/shop/">Plans</a></li>
+		<li id="menu-item-1206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1206"><a href="http://streamiumtheme.com/forums/">Forums</a></li>
+		<li id="menu-item-1209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1209"><a href="http://streamiumtheme.com/about-us/">About Us</a></li>
+		<li id="menu-item-1272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a href="http://streamiumtheme.com/my-account/">My Account</a></li>
+		<li><a class="streamium-auth" href="http://streamiumtheme.com/my-account/">Log In</a></li>				
+	    </ul> <!-- primary-nav -->
+	</nav> <!-- cd-nav -->
+
+	<ul class="cd-header-buttons">
+	    <li><a class="cd-search-trigger" href="#cd-search">Search<span></span></a></li>
+	    <li><a class="cd-nav-trigger" href="#cd-primary-nav">Menu<span></span></a></li>
+	</ul> <!-- cd-header-buttons -->
+	<div id="cd-search" class="cd-search">
+	    <form method="get" action="http://streamiumtheme.com/" role="search">
+		<input id="streamium-search-input" type="search" name="s" placeholder="Search...">
+	    </form>
+	</div>		
+    </header>
+    <main class="cd-main-content">
+
+	<section class="categories">
+
+	    <div class="container-fluid">
+		<div class="row">
+		    <div class="col-xs-12 col-sm-12 col-md-12 video-header-archive">
+			<h3>Viewing: Action</h3>
+			<div class="streamium-drop-dropdown-wrapper open-to-left">
+			    <a class="streamium-drop-dropdown-trigger" href="#0">FILTER</a>
+			    <nav class="streamium-drop-dropdown">
+				<ul class="streamium-drop-dropdown-content">
+				    <li><a class="tax-search-filter" data-type="all" href="?sort=all">View All</a></li>
+				    <li><a class="tax-search-filter" data-type="reviewed" href="?sort=reviewed">Most Reviews</a></li>
+				    <li><a class="tax-search-filter" data-type="newest" href="?sort=newest">Recently Added</a></li>
+				    <li><a class="tax-search-filter" data-type="oldest" href="?sort=oldest">Oldest First</a></li>
+				</ul> <!-- .cd-dropdown-content -->
+			    </nav> <!-- .cd-dropdown -->
+			</div> <!-- .cd-dropdown-wrapper -->
+		    </div><!--/.col-sm-12-->
+		</div><!--/.row-->
+	    </div><!--/.container-->
+
+	    <div id="tax-watched"></div>
+
+	</section><!--/.videos-->
+
+    </main><!--/.main content-->
+
+    <footer class="footer">
+	<div class="container-fluid">
+	    <div class="row">
+		<div class="col-sm-12">
+		    
+		    <p class="copyright">Powered by <a href="https://s3bubble.com">S3Bubble.com</a></p>
+
+		</div><!--/.col-sm-12-->
+	    </div><!--/.row-->
+	</div><!--/.container-->
+    </footer>
+
+    <div class="streamium-review-panel from-right">
+	<header class="streamium-review-panel-header">
+	    <h1>Reviews</h1>
+	    <a href="#0" class="streamium-review-panel-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+	</header>
+
+	<div class="streamium-review-panel-container">
+	    <div class="streamium-review-panel-content">
+		
+	    </div> <!-- streamium-review-panel-content -->
+	</div> <!-- streamium-review-panel-container -->
+    </div> <!-- streamium-review-panel -->
+</div>

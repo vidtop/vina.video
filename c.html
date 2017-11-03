@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+
+	<!-- Meta Data -->
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAAAAACpc9xZAAAABGdBTUEAALGPC/xhBQAAAkxJREFUSMdjECEXMIzqHNWJX6ewEAQIk6hTSEhG29jc3MxQS04Yh2asOoXEbUqWHr/54OH9q8dW1vurCQsTq9Ok6/qP/zDw++XubE1h4nR6H/r9HwV83uEjRoROYacz/9HBvzt5kgR1Cqtv/PcfE+xUFiZoZ84XiDUfbp08f+cN1N1PYkQJ2SmstBUSLvuSzHT0zUOadr4COuFbk6QwIZ1ClvfAOk9bQBKCiJL/8o//VqsIEwwhId+XYJ2zJKBqhQWVyjc5ChGOFSH/V2CdRy3gCU9YUl2MiJQg5PQE4s/9qYaysGQrTEzqE9aCxebHS8vLvbWlcKZ5jFiRnIiIzh8vziwocZEXJspOESGXmyhJ4OfjNSnqwkSlW/HCt2jp5+O2MElhYtKtbPntv2h6H+ZKCRORV4TFnXqu/UTV+jyFyJwtYVW26dob5Lx20kiI2NJEwSCsbv31j7CA/pYjRHwJJiikYJ446dofiNa56IGERaeoFFL5J2G//g/2DIqpU8iwwwbJZYKOkMyzT5WQTmHZCd/3eYnB9Qoa3wDr3E7QTuGEl///3W4wEgMmWCAQkm74CtY5XZxQXrE+DU6xZ9oDdFXk5NXsuiG57nuOIH6dwoqLoennz4tzu1auOXgXmiQumhOIFWGdXdhKvv8fi8UIpiGHTd8xNf6apUQ43QprNz9AT/Cf52sTlVckvGZd/4ak78vpUmUh4uoVISmb7BkHrj189ebN0xtHZqQZiBFdlwFTnaSanmVAcLCTvoakkBB96uzR9tCozkGtEwCkW50H/o5jiQAAAABJRU5ErkJggg==">
+	<link rel="apple-touch-icon" sizes="60x60" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAAAAAAfl4auAAAABGdBTUEAALGPC/xhBQAAAohJREFUSMdjEKEAMIxqHtU8QJqFhQTBQEhYmETNwsISuiHZFVVVpekhhlIiQsIkaBZWiZhz8umXP//+/fr09OzKYjtpIWI1C4v6bXz97z8C/Lg5zUlMmDjN4pGX/6OBP5cKlYSJ0SyacOs/Jvg0DVM3pmYhy4v/sYFD2kKENYt1/IHade3AruM33kB5z+OJ8LOQwWmI6kvZBspKqgYhjQc+AHlf2qSI8LOQ73Ow3pcpwsDkAUwpInrZJ37/XalFTGgLZ3wEaz6gJQRPMKZzd9sKERPPwtmfwJpveCPSpZCSnihRiUQ48T0kZg/HqksKCQpDLScueQo5PoDGzZuDM9OcFUWFhIjPGMLqO+FR++/LzQ0dMTYKwkLE5iqYp2EJ8+Ot9TmGosJEalZZ/gctcX09XaEuTFyuErZc9RU9bX5c7UJsllSvvvITTfe/k05CxBUGwhIOnec//EXVvURBmMhiSEhcL7pz/eU3vxC6X0cIEV0ACgkJyRsF1a2//x1m9WQJ4pwNKz+FRFScio/+gOjeg5GhsWmW0JaAe09YUNhkGSTqLloQoVnIY20scnEnEPQWksEtCWsW0tn6726xGiJFC0Z8AGs+bkRYs3gL0I+ftoQoAoMMWBgICZltgRTDi2SFCWqOug9S+ffJukIHfQ1lTeP43ZAE87OSYDwLmZ2ERez3pxcPbjty8yO0+L/pQDCehdzuYC14///skyKcwiTjT/3BovfPFj2iagzr+W8w9H5fYUFcXSWknLD5xW8UJ9/q1hYiNksKKQe0brr+9sfvP3/+/Pxwc1OtnZQwsVUsSLuIkmN4ak1HR0tWlIsSaZU7OFELCIiIiYkKCgiS2qwYbcSNah7ZmgHKKOcIpsD9wgAAAABJRU5ErkJggg==">
+	<link rel="apple-touch-icon" sizes="72x72" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAAAAABwhuybAAAABGdBTUEAALGPC/xhBQAAAyJJREFUWMPtl+9LU1EYx/sTvOe513vnNp1LU4tc+kIryYyphQaBJhoGlphFhiRRL8rMSKIwk2Ui0Yt+gSaKVCvKwLJMGNFKjcDQthcqLZmlzrTtzq1pdz+cm50ze9GLfV9eOJ/78Jzz/T7nrKH/kdYEQUFQEPRfgMCl1YCAAlG4TO6QTCqiKQgQBCBNKapr69JoNL3P7teXKmOZFeryDwLp7hsDU7zNvigbP6N7cna7CJGDklR6q32pZj9e3sYCISi902xfLrO2TAZEIOXLebtPGRvjAR+E4tV+OHa76TjCB3HVs66FNt5i8wRplfgVQdJ757IpTcs11Z0Hbw288GG0mMHvESqfFpYNnkwMY1mRJDHvwusfCx9mLkkJms02CJyJslAEC0cTUaziWPec3dq+AeFvP0R1CKDeTe5liE6s//ZOCQQHEmLUAqh7yf+R/HAeSwcE+l4ZiZC7BmDITAvh95ybNn47J1aCKAgwj6DG5TLrWE9TSWYMSyMUAAgVfPU4gfOm4eeNR1PXsysW5ruiaLWXL6zTuq6abBl5Hu0bWW4yXt9aKAcyEEjPGX34dd5wdydHlkcgr/xi84Gy9peGkeURiHM6xn2hdIdCyRIS6HVFbSOW5SRtKiKeIlFZ5x/3GbxgvEoM5HONi1QUVrX0T3jCBrZQAU1ahGSbC+o6R1zZO7mfqCJPr1LARe1tdYaduYYlAHEbJUv+Cyiu6ZfQpAYRPgjteFjhlalUmk4AXccHQUyzdawqGnmiqOShPyDLVQ7btFzlpKOpzVliNwq4UyZhcFcw2KA9nxf9MKTKXhtKUQghCkUcGRaabdiFu/2Q8FQwh0X/6HRuekrC1syiW2PO7X+lQJggyZU595w1G4f63nzQT7mO0Ww1i2kRiG73O/gd6knG91qGzyuN4P5CgpFNJzcZ/HBGTxDlEUSWvDD5wPDag2GECUkrKjq9A8Ssv6lkgCz8F1Bx+bXqT4afFqtD/JxxUH0xIyKQW63D/4w8LfdAea1KpTpTnK+UMwgCvfk7rjMhSCQWi5mQkL/MbYy3CMb7IfheC4KCoCBo9foNmJ0uF18xMOAAAAAASUVORK5CYII=">
+	<link rel="apple-touch-icon" sizes="76x76" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABMCAAAAADi/A73AAAABGdBTUEAALGPC/xhBQAAA1tJREFUWMPtl+tLU3EYx/0Tdn7POWcXN2ve8tLcvICodMOgZijhi8rAF0oqohEYRqkFaiqZvrGcVBRZGF0wiLQwKc0y0wqs0JBw5lDLtGlO3dh0J6tzdJtn4u/Yq9jz8sD58Ny+z/P8vMh/aF4emAfmgXlgJABiDWCDMERI/EM1kZGREeoQfxmBQDgMxOGHSho7+/X6ocHejsZzabuUJAiDAR1V0D5uszOs2W3THxuyVRQSAANlVucs42KLxtacULfJcwtDAeVfGR6zG+9rxYAHg4BKI8NvC31HNwEODKQFPxi3NpREYMESBtyz7C9iEQYM5FcWuV8thrctLa/7x+aWyzqYglUAIr6P80JfrVUFBW2NSDp9Z8Dy59NUkTdWAYgjJhY2kilnxURt3lPxwcow1utbsFoDpOU21rFbvsvpASTbeXWC6YhDWE0LitqFvzBbEeX4HfmdbD1MkZgwHZt/+91gJ3GDQiMDTJi8hvWMMV6IkRCOcQkQer6V64P57rMHomVLEYLQ4Sg6OL7So9bx7vqiJLWSJEAQDIW3O/f87EjPzePJGmrtaesmTOqUaZWILKPPK7XKtXDutBnWtMijSov+RrIP4A/HhFd8NGbxS00sjQ2j9zWbeGeG+Wkijb8DNCXvzbzOdWkBG4Zk2yt6Zuw8tHvBgAtbalRJTGZ9z/CMa/amcilBSxgpVbvzL7cNmx09tD8MRMLOA4RIWpWU19A7ueKgfgcmzGlYEJRvZEbTTw5mzMAMUyoBZw9BVc3R5goprL0py8513Y4o5DEHO4MH2z8wVujnkhnqEluGuSIcGEQ9tjMTdTG0Iw4FPmI9m87F2Zve5+d/67orTy3mphggn0JuyxviMapJpxlYF9oLEwJpaikoShpTMcpVszN0/TDY1rmi68FmXXFe+rHSa2/mlmdvFf8a9uLfdFYnLc7PTE47SuCTdv23BsiLjcwaZiqTYwgdAksN7lnW26FYIwh80l9a3LDMD+Iwz1CgYqsGrHy32beLasAe2+C9t/rd1ILLBfr9SYafoGub8I7OqXv2edJsXVgym2VqqE2XGkTjrzq250mxSpuScaJGV6sry0pNDBOTaCNvJyBEIlKuUCgkIpHA82DVYwxgHXeL5/HqgXlgHth/A/sFXFOoVdsVQJQAAAAASUVORK5CYII=">
+	<link rel="apple-touch-icon" sizes="114x114" href="data:image/png;base64,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">
+	<link rel="apple-touch-icon" sizes="120x120" href="data:image/png;base64,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">
+	<link rel="apple-touch-icon" sizes="144x144" href="data:image/png;base64,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">
+	<link rel="apple-touch-icon" sizes="152x152" href="data:image/png;base64,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">
+	<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+	<link rel="icon" type="image/png" sizes="192x192" href="http://streamiumtheme.com/wp-content/themes/Streamium-Netflix-Theme-master/production/img/xandroid-icon-192x192.png.pagespeed.ic.bB3ZSaaNr2.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAABGdBTUEAALGPC/xhBQAAAT1JREFUOMtjECEAGAadAiFBAQFBIZwKhMRNw1OSQ82kBIWxKhB2X3Ln658/X+5vylIQwqJAKOLOfyj4tsFCCEOBkPFFoNSnR69/Aak3AYIYCgSr/v3/vz3AwjFx7qs/reKYVgjP/P//TzK3oKCAeGiLmjCmAqHpQKN3B6uICgL9ic0Xgrkgyz+cXFzpJoPVm8LquyFe+Pt6W4q0MDZvWq36AvXm5ymKwlgCSkguaubpd39BKn7kCmJTICQoqu5ZtPg5UMUmuCXIVhgLCgsLCohFPvv//7wGhgJhtR1H/cUEBQX5TYBBfkwZQ4F45+//z5dmejgn7AQ6Y5YouhuE1Y6CXPfr3avvQOplIKYjRb13/4LF5usiLHEhIqiWtfr2h+8/Pt1eHCQmjDXBCEoae0ZE+RiLC5KbJodIzsICAOq900bpFp8BAAAAAElFTkSuQmCC">
+	<link rel="icon" type="image/png" sizes="96x96" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAAAAADH8yjkAAAABGdBTUEAALGPC/xhBQAABHRJREFUaN7tmP1PU1cYx/0TuOe5ty0tl5a3oowsLLZlAsPNbEHZlmWZrhmCDiVxi4OocWOikjkCuJfwwzBONBNd4oC4mkWCTpFNJdvidBljLFgV08Kcsby0ZZRie9u7tpje0nfvuUuW7H5/au4P59PnnnO/z/c5y8h/WctEgAgQASJABIiA/xYAANAj+X4KDQAEUgWtzPBLlU4rZL4HAgIA5OqimoPHDf0DPvV1dbS8tSZPJUmKkQwAKYp39Az9aV/wsAExTttff1xoq9DSBAgAAOmq+itTLjZMzNzExb2rFQgbABmbv7V52Wjy2K7uLZYBHgCpG2562FjyWi9sSQccAOQ0jrPx5Ll9cCXFHwAZ+8xsAllPahH/CjYZ2YS6V0XwBYDunCfh+g8NOv4V1FtDX7dz8vavI+OWeVco1XvtZd6bjDS93Pn0zgwc2PTqupder6w79J15LsgwbZcDXwDxhon7p+bm4jTCp5QUMrvwlebLD5jFLW7LwTimuxzB9e2tWUHrAQKUul2XrIEN0PD/0CDzM3cQcH0tWmp/qdrWUca3ARR/q0B5J5kgoEcN4QaurL56s1YBAgH6VkacRZCXV6qBxAF8yQHuN2RFtDGgKCy7htxj3B547rQ+QxNE8q0yGYCsMaQLeG2DH65fnQ0EAqEAJFEztcQ4HRM/HNmpX0UHAoAggLKfw/2fsd/qP7JHX5AmI5OsJB4AVO0Po7gbM2McON7wfKYMv+mj9SMxLNQ1NfJVjUaBMJs+pLdYY9v0/YHdOhlgAUjQnnLEaZfT57etwEwVVGmXPV5HNh0qlWA1fVJS+JHRFQcxa1gjwcxFmZVfj8dBzBtKEG6yy996emwhdg0fZwBeNgUkXV7ZftnsiJ7v2FsVAqRrKvXprfs///7uHBNJcR3NRfgDiM99gC7V1x0dHHe4wwi/v0AIM0IBIpC65LX9Z4YtS3bdWkMJN6P5GHR+SW3vg5BX5fwkzjYnPqYQWQiSFTSMcgRXVx7ina5TNXlRqcqdXOp2n8nnDyg61VYQrX60/KxXAABkt/89fbiQjESA/ETwMLkNfAGgqPO9CNvp8shRDKnPccbdmcsTgMp/8odc5409hWEzKyje4SYTRyPN7xSh/M6FR8m6r7YoFQJaHPnpzde5DD+5gd+HBsp9lqDxW/qbNz4ll0klFCWV0c8e+I3LZOyN5/gBJBuGQwOF487FL1re315R/W5r548zId+Zq4OfF4GmN9x0mNnJe2Mmyyyz5OlYFT83pV4cYZOR89gKfv0AshtN3sTrM1fW8c6m6t1D7kTre0erpbxnNEjXfzMTvwiPcYcKI1WARNc0FCcYsfODVTTeZQgoyw4P22NUwZhPrJVijFCLBFJV1nLJFKUMh7Fn2xMUZnQMGAYp125p6r52d3rBzXj8crvsE790N+mzJEnE62Rapt+A1GUb337vg44en7o/ra97s1wdrdnhpAqECILMedKvtBQi+UHq8Zr+4s3pYw1p4t21CBABIkAEiAAR8D8B/ANbem7txZlGfAAAAABJRU5ErkJggg==">
+	<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAABGdBTUEAALGPC/xhBQAAAI1JREFUGNNjEEEDDNgFhAWFhQWFEALCGqWLFlabi8IEhJU3/Xn74f8FQyGogGDQz2NWVk0d0jAVgv7fnvWE6ooLw7UozP/6//edehlhmKFCUgFd+z5/jxWEqVDK0xeQnve/WgBmRuK3WwvmPv4UCFeh03/zw4frZRIIh4lo2tppiAgj+UVYUFAYr+eQAAB3XDTC3ryC4gAAAABJRU5ErkJggg==">
+
+	<!-- Trackback -->
+	<link rel="pingback" href="http://streamiumtheme.com/xmlrpc.php"/>
+	
+	<!-- Wordpress Scripts -->
+	<title>Action Archives - Streamium</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v5.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://streamiumtheme.com/movies/action/"/>
+<link rel="next" href="http://streamiumtheme.com/movies/action/page/2/"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="object"/>
+<meta property="og:title" content="Action Archives - Streamium"/>
+<meta property="og:url" content="http://streamiumtheme.com/movies/action/"/>
+<meta property="og:site_name" content="Streamium"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Action Archives - Streamium"/>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/streamiumtheme.com\/","name":"Streamium","potentialAction":{"@type":"SearchAction","target":"http:\/\/streamiumtheme.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"http:\/\/streamiumtheme.com\/movies\/action\/","sameAs":[],"@id":"#organization","name":"S3Bubble","logo":"http:\/\/streamiumtheme.com\/wp-content\/uploads\/2017\/10\/square.jpg"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s.w.org'/>
+<link rel="alternate" type="application/rss+xml" title="Streamium &raquo; Feed" href="http://streamiumtheme.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="Streamium &raquo; Comments Feed" href="http://streamiumtheme.com/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="Streamium &raquo; Action Movies Categories Feed" href="http://streamiumtheme.com/movies/action/feed/"/>
+		<script type="text/javascript">window._wpemojiSettings={"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/streamiumtheme.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);</script>
+		<style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:none!important;padding:0!important}</style>
+<link rel='stylesheet' id='bbp-default-css' href='http://streamiumtheme.com/wp-content/plugins/bbpress/templates/default/css/A.bbpress.css,qver=2.5.14-6684.pagespeed.cf.UDybPq-xWG.css' type='text/css' media='screen'/>
+<link rel='stylesheet' id='woocommerce-layout-css' href='http://streamiumtheme.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css,qver=3.2.0.pagespeed.ce.WnxXnng41A.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='woocommerce-smallscreen-css' href='http://streamiumtheme.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css,qver=3.2.0.pagespeed.ce.SBzLgLprda.css' type='text/css' media='only screen and (max-width: 768px)'/>
+<link rel='stylesheet' id='woocommerce-general-css' href='http://streamiumtheme.com/wp-content/plugins/woocommerce/assets/css/A.woocommerce.css,qver=3.2.0.pagespeed.cf.OGhe2ZOIvA.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='wc-memberships-frontend-css' href='http://streamiumtheme.com/wp-content/plugins/woocommerce-memberships/assets/css/frontend/A.wc-memberships-frontend.min.css,qver=1.9.0.pagespeed.cf.Mbta-e5xRe.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='streamium-styles-css' href='http://streamiumtheme.com/wp-content/themes/Streamium-Netflix-Theme-master/A.style.css,qver=4.8.2.pagespeed.cf.1B2M2Y8Asg.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='streamium-production-css' href='http://streamiumtheme.com/wp-content/themes/Streamium-Netflix-Theme-master/production/css/A.streamium.min.css,qver=18.pagespeed.cf.OZDP0JqJQT.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='streamium-s3bubble-cdn-css' href='http://streamiumtheme.com/wp-content/themes/Streamium-Netflix-Theme-master/production/css/A.s3bubble.min.css,qver=18.pagespeed.cf.3RvhlJAEWR.css' type='text/css' media='all'/>
+<script type='text/javascript' src='http://streamiumtheme.com/wp-includes/js/jquery/jquery.js,qver=1.12.4.pagespeed.jm.pPCPAKkkss.js'></script>
+<script type='text/javascript' src='http://streamiumtheme.com/wp-includes/js/jquery/jquery-migrate.min.js,qver=1.4.1.pagespeed.jm.C2obERNcWh.js'></script>
+<script type='text/javascript' src='http://streamiumtheme.com/wp-includes/js/plupload/plupload.full.min.js,qver=2.1.8.pagespeed.jm.HFV--1VVGK.js'></script>
+<link rel='https://api.w.org/' href='http://streamiumtheme.com/wp-json/'/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://streamiumtheme.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://streamiumtheme.com/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 4.8.2"/>
+<meta name="generator" content="WooCommerce 3.2.0"/>
+      <!--Customizer CSS-->
+      <style type="text/css">@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,700&subset=latin) ;html,body{font-family:'Montserrat',sans-serif!important}.video-header h3,.see-all,.slick-arrow,h4.series-watched-episode-title{color:#f2f2f2!important}.tile_inner{padding-bottom:56.25!important}.woocommerce-page .cd-main-content a,.page .cd-main-content a,.bbpress .cd-main-content a,.brand-color{color:#9b5c8f}#place_order,.pagination a:hover,.pagination .current,.slick-dots li.slick-active button,.progress-bar,.button,.cd-overlay,.has-children>a:hover::before,.has-children>a:hover::after,.go-back a:hover::before,.go-back a:hover::after,#submit,#place_order,.checkout-button,.woocommerce-thankyou-order-received,.add_to_cart_button,.confirm,.streamium-btns,.streamium-extra-meta,.streamium-auth{background-color:#9b5c8f!important}.synopis-inner .content{font-size:1.6vw!important}.woocommerce-message,.woocommerce-info{border-top-color:#9b5c8f!important}.streamium-list-reviews{background:#000!important}.streamium-list-reviews:hover{background:#fff!important;color:#000}</style>
+      <!--/Customizer CSS-->
+      	<noscript><style>.woocommerce-product-gallery{opacity:1!important}</style></noscript>
+			<style type="text/css">.recentcomments a{display:inline!important;padding:0!important;margin:0!important}</style>
+				<style type="text/css" id="wp-custom-css">.panel{text-align:center}.panel .table{margin-bottom:0px}.panel td{color:#000}.panel-title{margin:5px;font-size:24px}.panel:hover{box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4), 0 1px 5px rgba(130, 130, 130, 0.35)}.panel-body{padding:0px;text-align:center}.the-price{background-color:rgba(220,220,220,.17);box-shadow: 0 1px 0 #dcdcdc, inset 0 1px 0 #fff;padding:20px;margin:0}.the-price h1{line-height:1em;padding:0;margin:0}.subscript{font-size:25px}.cnrflash{position:absolute;top:-9px;right:4px;z-index:1;overflow:hidden;width:100px;height:100px;border-radius:3px 5px 3px 0}.cnrflash-inner{position:absolute;bottom:0;right:0;width:145px;height:145px;-ms-transform:rotate(45deg);-o-transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-webkit-transform-origin:100% 100%;-ms-transform-origin:100% 100%;-o-transform-origin:100% 100%;-moz-transform-origin:100% 100%;background-size: 4px, auto, auto, auto;background-color:#aa0101;box-shadow: 0 3px 3px 0 rgba(1, 1, 1, .5),
+    0 1px 0 0 rgba(1, 1, 1, .5),
+    inset 0 -1px 8px 0 rgba(255, 255, 255, .3),
+    inset 0 -1px 0 0 rgba(255, 255, 255, .2)}.cnrflash-inner:before,.cnrflash-inner:after{content:" ";display:block;position:absolute;bottom:-16px;width:0;height:0;border:8px solid maroon}.cnrflash-inner:before{left:1px;border-bottom-color:transparent;border-right-color:transparent}.cnrflash-inner:after{right:0;border-bottom-color:transparent;border-left-color:transparent}.cnrflash-label{position:absolute;bottom:0;left:0;display:block;width:100%;padding-bottom:8px;color:#fff;text-shadow:0 1px 1px rgba(1,1,1,.8);font-size:.95em;font-weight:bold;text-align:center}</style>
+	
+</head> 
+<body class="archive tax-movies term-action term-6">
+
+	
+	<header class="cd-main-header fixed">
+
+		
+		    <a class="cd-logo" href="http://streamiumtheme.com/"><script pagespeed_no_defer="">//<![CDATA[
+(function(){var g=this,h=function(b,d){var a=b.split("."),c=g;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};var l=function(b){var d=b.length;if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};var m=function(b){var d=window;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var n,p=function(b,d,a,c,e){this.f=b;this.h=d;this.i=a;this.c=e;this.e={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.g=c;this.b={};this.a=[];this.d={}},q=function(b,d){var a,c,e=d.getAttribute("pagespeed_url_hash");if(a=e&&!(e in b.d))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=document.body;a=c.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.e.height&&c<=b.e.width)}a&&(b.a.push(e),b.d[e]=!0)};p.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&q(this,b)};h("pagespeed.CriticalImages.checkImageForCriticality",function(b){n.checkImageForCriticality(b)});h("pagespeed.CriticalImages.checkCriticalImages",function(){r(n)});var r=function(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d.length;++c)a=a.concat(l(document.getElementsByTagName(d[c])));if(0!=a.length&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)q(b,d);a="oh="+b.i;b.c&&(a+="&n="+b.c);if(d=0!=b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),c=1;c<b.a.length;++c){var e=","+encodeURIComponent(b.a[c]);131072>=a.length+e.length&&(a+=e)}b.g&&(e="&rd="+encodeURIComponent(JSON.stringify(s())),131072>=a.length+e.length&&(a+=e),d=!0);t=a;if(d){c=b.f;b=b.h;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(k){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(u){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}},s=function(){var b={},d=document.getElementsByTagName("IMG");if(0==d.length)return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("pagespeed_url_hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].k&&a.height>=b[e].j)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b},t="";h("pagespeed.CriticalImages.getBeaconData",function(){return t});h("pagespeed.CriticalImages.Run",function(b,d,a,c,e,f){var k=new p(b,d,a,e,f);n=k;c&&m(function(){window.setTimeout(function(){r(k)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://streamiumtheme.com/movies/action/','YddRYU7ik1',true,false,'hMN_uqJQFCE');
+//]]></script><img src='data:image/png;base64,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' alt='Streamium' pagespeed_url_hash="3366483267" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+
+		
+		<nav class="cd-nav">
+			<ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
+
+				 
+					
+					
+						<li class="menu-item-has-children">
+						<a href="http://streamiumtheme.com/">Movies</a>
+						<ul class="sub-menu is-hidden">
+							<li class="go-back">
+								<a href="#0">Menu</a>
+							</li>
+							<li class="see-all">
+								<a href="http://streamiumtheme.com/movie">View All</a>
+							</li>
+
+							
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+												
+
+											<li class="go-back"><a href="#0">Action</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/action/">Action</a></li>
+
+														
+
+												
+
+											<li class="go-back"><a href="#0">British</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/british/">British</a></li>
+
+														
+
+												
+
+											<li class="go-back"><a href="#0">Comedies</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/comedies/">Comedies</a></li>
+
+														
+
+												
+
+											<li class="go-back"><a href="#0">Crime Films</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/crime-films/">Crime Films</a></li>
+
+														
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+												
+
+											<li class="go-back"><a href="#0">Cult Films</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/cult-films/">Cult Films</a></li>
+
+														
+
+												
+
+											<li class="go-back"><a href="#0">Documentaries</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/documentaries/">Documentaries</a></li>
+
+														
+
+												
+
+											<li class="go-back"><a href="#0">Dramas</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/dramas/">Dramas</a></li>
+
+														
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+												
+
+											<li class="go-back"><a href="#0">Horror</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/horror/">Horror</a></li>
+
+														
+
+												
+
+											<li class="go-back"><a href="#0">Independent</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/independent/">Independent</a></li>
+
+														
+
+												
+
+											<li class="go-back"><a href="#0">International</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/international/">International</a></li>
+
+														
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+												
+
+											<li class="go-back"><a href="#0">Sci-Fi</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/sci-fi/">Sci-Fi</a></li>
+
+														
+
+												
+
+											<li class="go-back"><a href="#0">Stand Up</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/stand-up/">Stand Up</a></li>
+
+														
+
+												
+
+											<li class="go-back"><a href="#0">Thriller</a></li>
+											
+												<li><a href="http://streamiumtheme.com/movies/thriller/">Thriller</a></li>
+
+														
+
+																					</ul>
+									</li>
+							    	
+													</ul>				
+					</li>
+					
+				 
+					
+					
+						<li class="menu-item-has-children">
+						<a href="http://streamiumtheme.com/">TV Programs</a>
+						<ul class="sub-menu is-hidden">
+							<li class="go-back">
+								<a href="#0">Menu</a>
+							</li>
+							<li class="see-all">
+								<a href="http://streamiumtheme.com/tv">View All</a>
+							</li>
+
+							
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+												
+
+											<li class="go-back"><a href="#0">Box Sets</a></li>
+											
+												<li><a href="http://streamiumtheme.com/programs/box-sets/">Box Sets</a></li>
+
+														
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+												
+
+											<li class="go-back"><a href="#0">Crime</a></li>
+											
+												<li><a href="http://streamiumtheme.com/programs/crime/">Crime</a></li>
+
+														
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+												
+
+											<li class="go-back"><a href="#0">USA</a></li>
+											
+												<li><a href="http://streamiumtheme.com/programs/usa/">USA</a></li>
+
+														
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+																					</ul>
+									</li>
+							    	
+													</ul>				
+					</li>
+					
+				 
+					
+					
+						<li class="menu-item-has-children">
+						<a href="http://streamiumtheme.com/">Sport</a>
+						<ul class="sub-menu is-hidden">
+							<li class="go-back">
+								<a href="#0">Menu</a>
+							</li>
+							<li class="see-all">
+								<a href="http://streamiumtheme.com/sport">View All</a>
+							</li>
+
+							
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+												
+
+											<li class="go-back"><a href="#0">Basketball</a></li>
+											
+												<li><a href="http://streamiumtheme.com/sports/basketball/">Basketball</a></li>
+
+														
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+																					</ul>
+									</li>
+							    	
+													</ul>				
+					</li>
+					
+				 
+					
+					
+						<li class="menu-item-has-children">
+						<a href="http://streamiumtheme.com/">Kids</a>
+						<ul class="sub-menu is-hidden">
+							<li class="go-back">
+								<a href="#0">Menu</a>
+							</li>
+							<li class="see-all">
+								<a href="http://streamiumtheme.com/kid">View All</a>
+							</li>
+
+							
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+												
+
+											<li class="go-back"><a href="#0">Family</a></li>
+											
+												<li><a href="http://streamiumtheme.com/kids/family/">Family</a></li>
+
+														
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+																					</ul>
+									</li>
+							    
+							    	<li class="menu-item-has-children">
+								    	
+										<ul class="is-hidden">
+
+																					</ul>
+									</li>
+							    	
+													</ul>				
+					</li>
+					
+				 
+					
+					<li id="menu-item-1290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1290"><a href="http://streamiumtheme.com/uploader/">Uploader</a></li>
+<li id="menu-item-1271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1271"><a href="http://streamiumtheme.com/shop/">Plans</a></li>
+<li id="menu-item-1206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1206"><a href="http://streamiumtheme.com/forums/">Forums</a></li>
+<li id="menu-item-1209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1209"><a href="http://streamiumtheme.com/about-us/">About Us</a></li>
+<li id="menu-item-1272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a href="http://streamiumtheme.com/my-account/">My Account</a></li>
+<li><a class="streamium-auth" href="http://streamiumtheme.com/my-account/">Log In</a></li>				
+			</ul> <!-- primary-nav -->
+		</nav> <!-- cd-nav -->
+
+		<ul class="cd-header-buttons">
+			<li><a class="cd-search-trigger" href="#cd-search">Search<span></span></a></li>
+			<li><a class="cd-nav-trigger" href="#cd-primary-nav">Menu<span></span></a></li>
+		</ul> <!-- cd-header-buttons -->
+		<div id="cd-search" class="cd-search">
+	<form method="get" action="http://streamiumtheme.com/" role="search">
+            <input id="streamium-search-input" type="search" name="s" placeholder="Search...">
+    </form>
+</div>		
+	</header>
+	<main class="cd-main-content">
+
+		<section class="categories">
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 video-header-archive">
+						<h3>Viewing: Action</h3>
+													<div class="streamium-drop-dropdown-wrapper open-to-left">
+								<a class="streamium-drop-dropdown-trigger" href="#0">FILTER</a>
+								<nav class="streamium-drop-dropdown">
+									<ul class="streamium-drop-dropdown-content">
+										<li><a class="tax-search-filter" data-type="all" href="?sort=all">View All</a></li>
+									    <li><a class="tax-search-filter" data-type="reviewed" href="?sort=reviewed">Most Reviews</a></li>
+									    <li><a class="tax-search-filter" data-type="newest" href="?sort=newest">Recently Added</a></li>
+									    <li><a class="tax-search-filter" data-type="oldest" href="?sort=oldest">Oldest First</a></li>
+									</ul> <!-- .cd-dropdown-content -->
+								</nav> <!-- .cd-dropdown -->
+							</div> <!-- .cd-dropdown-wrapper -->
+											</div><!--/.col-sm-12-->
+				</div><!--/.row-->
+			</div><!--/.container-->
+
+			<div id="tax-watched"></div>
+
+		</section><!--/.videos-->
+
+	</main><!--/.main content-->
+
+	<footer class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					
+					    <p class="copyright">Powered by <a href="https://s3bubble.com">S3Bubble.com</a></p>
+
+									</div><!--/.col-sm-12-->
+			</div><!--/.row-->
+		</div><!--/.container-->
+	</footer>
+
+	<div class="streamium-review-panel from-right">
+		<header class="streamium-review-panel-header">
+			<h1>Reviews</h1>
+			<a href="#0" class="streamium-review-panel-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+		</header>
+
+		<div class="streamium-review-panel-container">
+			<div class="streamium-review-panel-content">
+				
+			</div> <!-- streamium-review-panel-content -->
+		</div> <!-- streamium-review-panel-container -->
+	</div> <!-- streamium-review-panel -->
+		<script src="http://streamiumtheme.com/wp-content/plugins/bbpress,_templates,_default,_js,_editor.js,qver==2.5.14-6684+woocommerce,_assets,_js,_jquery-blockui,_jquery.blockUI.min.js,qver==2.70+woocommerce,_assets,_js,_js-cookie,_js.cookie.min.js,qver==2.1.4.pagespeed.jc.wbJUQWLphG.js"></script><script>eval(mod_pagespeed_NKPyU5Gp8e);</script>
+<script>eval(mod_pagespeed_756YF$RV0B);</script>
+<script>eval(mod_pagespeed_JU64aF0hWP);</script>
+<script type='text/javascript'>//<![CDATA[
+var woocommerce_params={"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"http:\/\/streamiumtheme.com\/?wc-ajax=%%endpoint%%"};
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function(o){o(".woocommerce-ordering").on("change","select.orderby",function(){o(this).closest("form").submit()}),o("input.qty:not(.product-quantity input.qty)").each(function(){var e=parseFloat(o(this).attr("min"));e>=0&&parseFloat(o(this).val())<e&&o(this).val(e)}),jQuery(".woocommerce-store-notice__dismiss-link").click(function(){Cookies.set("store_notice","hidden",{path:"/"}),jQuery(".woocommerce-store-notice").hide()}),"hidden"===Cookies.get("store_notice")?jQuery(".woocommerce-store-notice").hide():jQuery(".woocommerce-store-notice").show()});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var wc_cart_fragments_params={"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"http:\/\/streamiumtheme.com\/?wc-ajax=%%endpoint%%","fragment_name":"wc_fragments_d2ab9e32271200a0d254123225d7fe1d"};
+//]]></script>
+<script type='text/javascript' src='http://streamiumtheme.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js,qver=3.2.0.pagespeed.ce.ZEw9lhj3Bd.js'></script>
+<script type='text/javascript'>//<![CDATA[
+var streamium_object={"ajax_url":"http:\/\/streamiumtheme.com\/wp-admin\/admin-ajax.php","recently_watched_api_nonce":"d34ff64e9b","custom_api_nonce":"f59d5cc2f5","home_api_nonce":"ed0e87c2d2","tax_api_nonce":"886aaa51c2","search_api_nonce":"1e054b491d","extra_api_nonce":"df8841db40","query":{"term_id":6,"name":"Action","slug":"action","term_group":0,"term_taxonomy_id":6,"taxonomy":"movies","description":"","parent":0,"count":18,"filter":"raw"},"search":[],"is_home":"","is_archive":"1","is_tax":"1","is_search":"","tile_count":"6","read_more":"read more","autoplay_slider":"1"};
+//]]></script>
+<script type='text/javascript' src='http://streamiumtheme.com/wp-content/themes/Streamium-Netflix-Theme-master/production/js/streamium.min.js,qver=18.pagespeed.jm.EnuDu33dfy.js'></script>
+<script type='text/javascript' src='http://streamiumtheme.com/wp-content/themes/Streamium-Netflix-Theme-master/production/js/s3bubble.min.js?ver=18'></script>
+<script type='text/javascript'>//<![CDATA[
+!function(a,b){"use strict";function c(){if(!e){e=!0;var a,c,d,f,g=-1!==navigator.appVersion.indexOf("MSIE 10"),h=!!navigator.userAgent.match(/Trident.*rv:11\./),i=b.querySelectorAll("iframe.wp-embedded-content");for(c=0;c<i.length;c++){if(d=i[c],!d.getAttribute("data-secret"))f=Math.random().toString(36).substr(2,10),d.src+="#?secret="+f,d.setAttribute("data-secret",f);if(g||h)a=d.cloneNode(!0),a.removeAttribute("security"),d.parentNode.replaceChild(a,d)}}}var d=!1,e=!1;if(b.querySelector)if(a.addEventListener)d=!0;if(a.wp=a.wp||{},!a.wp.receiveEmbedMessage)if(a.wp.receiveEmbedMessage=function(c){var d=c.data;if(d.secret||d.message||d.value)if(!/[^a-zA-Z0-9]/.test(d.secret)){var e,f,g,h,i,j=b.querySelectorAll('iframe[data-secret="'+d.secret+'"]'),k=b.querySelectorAll('blockquote[data-secret="'+d.secret+'"]');for(e=0;e<k.length;e++)k[e].style.display="none";for(e=0;e<j.length;e++)if(f=j[e],c.source===f.contentWindow){if(f.removeAttribute("style"),"height"===d.message){if(g=parseInt(d.value,10),g>1e3)g=1e3;else if(~~g<200)g=200;f.height=g}if("link"===d.message)if(h=b.createElement("a"),i=b.createElement("a"),h.href=f.getAttribute("src"),i.href=d.value,i.host===h.host)if(b.activeElement===f)a.top.location.href=d.value}else;}},d)a.addEventListener("message",a.wp.receiveEmbedMessage,!1),b.addEventListener("DOMContentLoaded",c,!1),a.addEventListener("load",c,!1)}(window,document);
+//]]></script>
+	
+			<!-- Google Tracking Code Below You Can Set This In The Customizer -->
+			<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-103011809-1','auto');ga('send','pageview');</script>
+
+		  		
+</body>
+</html>

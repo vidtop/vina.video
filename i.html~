@@ -1,0 +1,884 @@
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+
+	<!-- Meta Data -->
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	
+	<!-- Wordpress Scripts -->
+	<title>Streamium - Netflix inspired wordpress theme</title>
+
+<link rel='stylesheet' id='streamium-production-css' href='./css/streamium.min.css?ver=18' type='text/css' media='all'/>
+<link rel='stylesheet' id='streamium-s3bubble-cdn-css' href='./css/s3bubble.min.css?ver=18' type='text/css' media='all'/>
+<script type='text/javascript' src='./js/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='./js/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='./js/nanoajax.min.js'></script>
+<script type='text/javascript' src='./js/morphdom.min.js'></script>
+<script type='text/javascript' src='./js/lazyload.min.js'></script>
+<script type='text/javascript' src='./js/fastdom.min.js'></script>
+<!--Customizer CSS-->
+<style type="text/css">@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,700&subset=latin) ;html,body{font-family:'Montserrat',sans-serif!important}.video-header h3,.see-all,.slick-arrow,h4.series-watched-episode-title{color:#f2f2f2!important}.tile_inner{padding-bottom:56.25!important}.woocommerce-page .cd-main-content a,.page .cd-main-content a,.bbpress .cd-main-content a,.brand-color{color:#9b5c8f}#place_order,.pagination a:hover,.pagination .current,.slick-dots li.slick-active button,.progress-bar,.button,.cd-overlay,.has-children>a:hover::before,.has-children>a:hover::after,.go-back a:hover::before,.go-back a:hover::after,#submit,#place_order,.checkout-button,.woocommerce-thankyou-order-received,.add_to_cart_button,.confirm,.streamium-btns,.streamium-extra-meta,.streamium-auth{background-color:#9b5c8f!important}.synopis-inner .content{font-size:1.6vw!important}.woocommerce-message,.woocommerce-info{border-top-color:#9b5c8f!important}.streamium-list-reviews{background:#000!important}.streamium-list-reviews:hover{background:#fff!important;color:#000}</style>
+<!--/Customizer CSS-->
+
+</head> 
+<body class="home blog">
+    <!-- <div id="page_container" class="home blog"> -->
+
+	
+	<header class="cd-main-header fixed">
+
+	    
+	    <a class="cd-logo" href="http://streamiumtheme.com/">
+		<img src='http://streamiumtheme.com/wp-content/uploads/2017/10/if_woocommerce_1010057-2.png' alt='Streamium'>
+	    </a>
+
+	    
+	    <nav class="cd-nav">
+		<ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
+
+		    
+		    
+		    
+		    <li class="menu-item-has-children">
+			<a href="http://streamiumtheme.com/">Movies</a>
+			<ul class="sub-menu is-hidden">
+			    <li class="go-back">
+				<a href="#0">Menu</a>
+			    </li>
+			    <li class="see-all">
+				<a href="http://streamiumtheme.com/movie">View All</a>
+			    </li>
+
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				    
+
+				    <li class="go-back"><a href="#0">Action</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/action/">Action</a></li>
+
+				    
+
+				    
+
+				    <li class="go-back"><a href="#0">British</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/british/">British</a></li>
+
+				    
+
+				    
+
+				    <li class="go-back"><a href="#0">Comedies</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/comedies/">Comedies</a></li>
+
+				    
+
+				    
+
+				    <li class="go-back"><a href="#0">Crime Films</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/crime-films/">Crime Films</a></li>
+
+				    
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				    
+
+				    <li class="go-back"><a href="#0">Cult Films</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/cult-films/">Cult Films</a></li>
+
+				    
+
+				    
+
+				    <li class="go-back"><a href="#0">Documentaries</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/documentaries/">Documentaries</a></li>
+
+				    
+
+				    
+
+				    <li class="go-back"><a href="#0">Dramas</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/dramas/">Dramas</a></li>
+
+				    
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				    
+
+				    <li class="go-back"><a href="#0">Horror</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/horror/">Horror</a></li>
+
+				    
+
+				    
+
+				    <li class="go-back"><a href="#0">Independent</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/independent/">Independent</a></li>
+
+				    
+
+				    
+
+				    <li class="go-back"><a href="#0">International</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/international/">International</a></li>
+
+				    
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				    
+
+				    <li class="go-back"><a href="#0">Sci-Fi</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/sci-fi/">Sci-Fi</a></li>
+
+				    
+
+				    
+
+				    <li class="go-back"><a href="#0">Stand Up</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/stand-up/">Stand Up</a></li>
+
+				    
+
+				    
+
+				    <li class="go-back"><a href="#0">Thriller</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/movies/thriller/">Thriller</a></li>
+
+				    
+
+				</ul>
+			    </li>
+			    
+			</ul>				
+		    </li>
+		    
+		    
+		    
+		    
+		    <li class="menu-item-has-children">
+			<a href="http://streamiumtheme.com/">TV Programs</a>
+			<ul class="sub-menu is-hidden">
+			    <li class="go-back">
+				<a href="#0">Menu</a>
+			    </li>
+			    <li class="see-all">
+				<a href="http://streamiumtheme.com/tv">View All</a>
+			    </li>
+
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				    
+
+				    <li class="go-back"><a href="#0">Box Sets</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/programs/box-sets/">Box Sets</a></li>
+
+				    
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				    
+
+				    <li class="go-back"><a href="#0">Crime</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/programs/crime/">Crime</a></li>
+
+				    
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				    
+
+				    <li class="go-back"><a href="#0">USA</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/programs/usa/">USA</a></li>
+
+				    
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				</ul>
+			    </li>
+			    
+			</ul>				
+		    </li>
+		    
+		    
+		    
+		    
+		    <li class="menu-item-has-children">
+			<a href="http://streamiumtheme.com/">Sport</a>
+			<ul class="sub-menu is-hidden">
+			    <li class="go-back">
+				<a href="#0">Menu</a>
+			    </li>
+			    <li class="see-all">
+				<a href="http://streamiumtheme.com/sport">View All</a>
+			    </li>
+
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				    
+
+				    <li class="go-back"><a href="#0">Basketball</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/sports/basketball/">Basketball</a></li>
+
+				    
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				</ul>
+			    </li>
+			    
+			</ul>				
+		    </li>
+		    
+		    
+		    
+		    
+		    <li class="menu-item-has-children">
+			<a href="http://streamiumtheme.com/">Kids</a>
+			<ul class="sub-menu is-hidden">
+			    <li class="go-back">
+				<a href="#0">Menu</a>
+			    </li>
+			    <li class="see-all">
+				<a href="http://streamiumtheme.com/kid">View All</a>
+			    </li>
+
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				    
+
+				    <li class="go-back"><a href="#0">Family</a></li>
+				    
+				    <li><a href="http://streamiumtheme.com/kids/family/">Family</a></li>
+
+				    
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				</ul>
+			    </li>
+			    
+			    <li class="menu-item-has-children">
+				
+				<ul class="is-hidden">
+
+				</ul>
+			    </li>
+			    
+			</ul>				
+		    </li>
+		    
+		    
+		    
+		    <li id="menu-item-1290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1290"><a href="http://streamiumtheme.com/uploader/">Uploader</a></li>
+		    <li id="menu-item-1271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1271"><a href="http://streamiumtheme.com/shop/">Plans</a></li>
+		    <li id="menu-item-1206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1206"><a href="http://streamiumtheme.com/forums/">Forums</a></li>
+		    <li id="menu-item-1209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1209"><a href="http://streamiumtheme.com/about-us/">About Us</a></li>
+		    <li id="menu-item-1272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a href="http://streamiumtheme.com/my-account/">My Account</a></li>
+		    <li><a class="streamium-auth" href="http://streamiumtheme.com/my-account/">Log In</a></li>				
+		</ul> <!-- primary-nav -->
+	    </nav> <!-- cd-nav -->
+
+	    <ul class="cd-header-buttons">
+		<li><a class="cd-search-trigger" href="#cd-search">Search<span></span></a></li>
+		<li><a class="cd-nav-trigger" href="#cd-primary-nav">Menu<span></span></a></li>
+	    </ul> <!-- cd-header-buttons -->
+	    <div id="cd-search" class="cd-search">
+		<form method="get" action="http://streamiumtheme.com/" role="search">
+		    <input id="streamium-search-input" type="search" name="s" placeholder="Search...">
+		</form>
+	    </div>		
+	</header>
+	<main class="cd-main-content">
+
+	    <section class="streamium-slider">
+		
+		
+		<div>
+		    
+		    <div id="streamium-featured-background-1297" class="s3bubble streamium-featured-background" data-setup='{"codes": "FzLN63639","source":{"poster":"https://s3.amazonaws.com/s3bubble-cdn/theme-images/streamium-video-blank.png"},"options":{"background":true,"muted":true,"loop":true,"autoplay":true,"controls":false,"vpaid":""},"meta":{"skipButtons":false,"showSocial":false,"backButton":false,"subTitle": "","title": "","para": ""}}'></div>
+
+		    <article class="content-overlay">
+			<div class="content-overlay-grad"></div>
+			<div class="container-fluid rel">
+			    <div class="row rel">
+				<div class="col-sm-5 col-xs-6 rel">
+				    <div class="synopis-outer">
+					<div class="synopis-middle">
+					    <div class="synopis-inner">
+						<h2>Toy Story</h2>
+						<div class="synopis content">
+						    Evil wizard Gargamel (Hank Azaria) has plagued the happy, peaceful Smurfs for a very long <a class="show-more-content" data-id="1297">read more</a>												<ul class="hidden-xs">
+						    <li class="synopis-meta-spacer">Kids: <a href="http://streamiumtheme.com/kids/family/">Family</a></li><li class="synopis-meta-spacer">Released: <a href="/?s=all&date=2017/10/10">October 10, 2017</a></li>												</ul>
+						</div>
+						
+						<div class="synopis-premium-meta hidden-xs">
+						    <a id="like-count-1297" class="streamium-review-like-btn streamium-btns streamium-reviews-btns" data-toggle="tooltip" title="CLICK TO LIKE!" data-id="1297" data-nonce="26e265e6ed">	0 Likes													</a>
+						    <a class="streamium-list-reviews streamium-btns streamium-reviews-btns" data-id="1297" data-nonce="26e265e6ed">Read reviews</a>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-sm-7 col-xs-6 rel">
+				    <a class="play-icon-wrap" href="http://streamiumtheme.com/kid/toy-story/">
+					<div class="play-icon-wrap-rel">
+					    <div class="play-icon-wrap-rel-ring"></div>
+					    <span class="play-icon-wrap-rel-play">
+						<i class="fa fa-play fa-3x brand-color" aria-hidden="true"></i>
+					    </span>
+					</div>
+				    </a>
+				</div>
+			    </div>
+			</div>
+		    </article><!--/.content-overlay-->
+
+		</div>
+
+		
+		
+		
+		<div style="background-image: url(http://streamiumtheme.com/wp-content/uploads/2017/10/Daniel-Radcliffe-in-the-film-Jungle-1170x585.jpg);">
+
+		    <article class="content-overlay">
+			<div class="content-overlay-grad"></div>
+			<div class="container-fluid rel">
+			    <div class="row rel">
+				<div class="col-sm-5 col-xs-5 rel">
+				    <div class="synopis-outer">
+					<div class="synopis-middle">
+					    <div class="synopis-inner">
+						<h2>Jungle Trailer</h2>
+						<div class="synopis content">
+						    A group of friends join a guide for a trek into the Bolivian jungle, searching <a class="show-more-content" data-id="1278">read more</a>												<ul class="hidden-xs">
+						    <li class="synopis-meta-spacer">Cast: <a href="/?s=Daniel Radcliffe">Daniel Radcliffe</a>, <a href="/?s=Lily Sullivan">Lily Sullivan</a>, <a href="/?s=Thomas Kretschmann">Thomas Kretschmann</a></li><li class="synopis-meta-spacer">Movies: <a href="http://streamiumtheme.com/movies/action/">Action</a>, <a href="http://streamiumtheme.com/movies/cult-films/">Cult Films</a>, <a href="http://streamiumtheme.com/movies/horror/">Horror</a>, <a href="http://streamiumtheme.com/movies/international/">International</a></li><li class="synopis-meta-spacer">Released: <a href="/?s=all&date=2017/10/09">October 9, 2017</a></li>												</ul>
+						</div>
+						
+						<div class="synopis-premium-meta hidden-xs">
+						    <a id="like-count-1278" class="streamium-review-like-btn streamium-btns streamium-reviews-btns" data-toggle="tooltip" title="CLICK TO LIKE!" data-id="1278" data-nonce="26e265e6ed">	0 Likes													</a>
+						    <a class="streamium-list-reviews streamium-btns streamium-reviews-btns" data-id="1278" data-nonce="26e265e6ed">Read reviews</a>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-sm-7 col-xs-7 rel">
+				    <a class="play-icon-wrap" href="http://streamiumtheme.com/movie/jungle-trailer/">
+					<div class="play-icon-wrap-rel">
+					    <div class="play-icon-wrap-rel-ring"></div>
+					    <span class="play-icon-wrap-rel-play">
+						<i class="fa fa-play fa-3x brand-color" aria-hidden="true"></i>
+					    </span>
+					</div>
+				    </a>
+				</div>
+			    </div>
+			</div>
+		    </article><!--/.content-overlay-->
+
+		</div>
+
+		
+		
+		
+		<div style="background-image: url(http://streamiumtheme.com/wp-content/uploads/2017/10/us-olympic-track-team-roster-970x540.jpg);">
+
+		    <article class="content-overlay">
+			<div class="content-overlay-grad"></div>
+			<div class="container-fluid rel">
+			    <div class="row rel">
+				<div class="col-sm-5 col-xs-5 rel">
+				    <div class="synopis-outer">
+					<div class="synopis-middle">
+					    <div class="synopis-inner">
+						<h2>2017 Olympics</h2>
+						<div class="synopis content">
+						    The NBA Finals is the championship series of the National Basketball Association. The entrants are <a class="show-more-content" data-id="1251">read more</a>												<ul class="hidden-xs">
+						    <li class="synopis-meta-spacer">Sports: <a href="http://streamiumtheme.com/sports/basketball/">Basketball</a></li><li class="synopis-meta-spacer">Released: <a href="/?s=all&date=2017/10/09">October 9, 2017</a></li>												</ul>
+						</div>
+						
+						<div class="synopis-premium-meta hidden-xs">
+						    <a id="like-count-1251" class="streamium-review-like-btn streamium-btns streamium-reviews-btns" data-toggle="tooltip" title="CLICK TO LIKE!" data-id="1251" data-nonce="26e265e6ed">	0 Likes													</a>
+						    <a class="streamium-list-reviews streamium-btns streamium-reviews-btns" data-id="1251" data-nonce="26e265e6ed">Read reviews</a>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-sm-7 col-xs-7 rel">
+				    <a class="play-icon-wrap" href="http://streamiumtheme.com/sport/2017-olympics/">
+					<div class="play-icon-wrap-rel">
+					    <div class="play-icon-wrap-rel-ring"></div>
+					    <span class="play-icon-wrap-rel-play">
+						<i class="fa fa-play fa-3x brand-color" aria-hidden="true"></i>
+					    </span>
+					</div>
+				    </a>
+				</div>
+			    </div>
+			</div>
+		    </article><!--/.content-overlay-->
+
+		</div>
+
+		
+		
+		
+		<div style="background-image: url(http://streamiumtheme.com/wp-content/uploads/2017/10/the-good-place-nbc-season-two-renewal-1040x585.jpg);">
+
+		    <article class="content-overlay">
+			<div class="content-overlay-grad"></div>
+			<div class="container-fluid rel">
+			    <div class="row rel">
+				<div class="col-sm-5 col-xs-5 rel">
+				    <div class="synopis-outer">
+					<div class="synopis-middle">
+					    <div class="synopis-inner">
+						<h2>The Good Place Tv Series</h2>
+						<div class="synopis content">
+						    When Eleanor Shellstrop finds herself in the afterlife, she's both relieved and surprised that she's <a class="show-more-content" data-id="1237">read more</a>												<ul class="hidden-xs">
+						    <li class="synopis-meta-spacer">Programs: <a href="http://streamiumtheme.com/programs/box-sets/">Box Sets</a>, <a href="http://streamiumtheme.com/programs/crime/">Crime</a>, <a href="http://streamiumtheme.com/programs/usa/">USA</a></li><li class="synopis-meta-spacer">Released: <a href="/?s=all&date=2017/10/09">October 9, 2017</a></li>												</ul>
+						</div>
+						
+						<div class="synopis-premium-meta hidden-xs">
+						    <a id="like-count-1237" class="streamium-review-like-btn streamium-btns streamium-reviews-btns" data-toggle="tooltip" title="CLICK TO LIKE!" data-id="1237" data-nonce="26e265e6ed">	0 Likes													</a>
+						    <a class="streamium-list-reviews streamium-btns streamium-reviews-btns" data-id="1237" data-nonce="26e265e6ed">Read reviews</a>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-sm-7 col-xs-7 rel">
+				    <a class="play-icon-wrap" href="http://streamiumtheme.com/tv/the-good-place-tv-series/">
+					<div class="play-icon-wrap-rel">
+					    <div class="play-icon-wrap-rel-ring"></div>
+					    <span class="play-icon-wrap-rel-play">
+						<i class="fa fa-play fa-3x brand-color" aria-hidden="true"></i>
+					    </span>
+					</div>
+				    </a>
+				</div>
+			    </div>
+			</div>
+		    </article><!--/.content-overlay-->
+
+		</div>
+
+		
+		
+		
+		<div style="background-image: url(http://streamiumtheme.com/wp-content/uploads/2017/10/FRINGE_30sheet-1-1179x540.jpg);">
+
+		    <article class="content-overlay">
+			<div class="content-overlay-grad"></div>
+			<div class="container-fluid rel">
+			    <div class="row rel">
+				<div class="col-sm-5 col-xs-5 rel">
+				    <div class="synopis-outer">
+					<div class="synopis-middle">
+					    <div class="synopis-inner">
+						<h2>Fringe Series</h2>
+						<div class="synopis content">
+						    FBI Special Agent Olivia Dunham is assigned to the bureau's Fringe Division, in which she <a class="show-more-content" data-id="1236">read more</a>												<ul class="hidden-xs">
+						    <li class="synopis-meta-spacer">Programs: <a href="http://streamiumtheme.com/programs/box-sets/">Box Sets</a>, <a href="http://streamiumtheme.com/programs/crime/">Crime</a>, <a href="http://streamiumtheme.com/programs/usa/">USA</a></li><li class="synopis-meta-spacer">Released: <a href="/?s=all&date=2017/10/09">October 9, 2017</a></li>												</ul>
+						</div>
+						
+						<div class="synopis-premium-meta hidden-xs">
+						    <a id="like-count-1236" class="streamium-review-like-btn streamium-btns streamium-reviews-btns" data-toggle="tooltip" title="CLICK TO LIKE!" data-id="1236" data-nonce="26e265e6ed">	0 Likes													</a>
+						    <a class="streamium-list-reviews streamium-btns streamium-reviews-btns" data-id="1236" data-nonce="26e265e6ed">Read reviews</a>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-sm-7 col-xs-7 rel">
+				    <a class="play-icon-wrap" href="http://streamiumtheme.com/tv/fringe-series/">
+					<div class="play-icon-wrap-rel">
+					    <div class="play-icon-wrap-rel-ring"></div>
+					    <span class="play-icon-wrap-rel-play">
+						<i class="fa fa-play fa-3x brand-color" aria-hidden="true"></i>
+					    </span>
+					</div>
+				    </a>
+				</div>
+			    </div>
+			</div>
+		    </article><!--/.content-overlay-->
+
+		</div>
+
+		
+		
+		
+		<div style="background-image: url(http://streamiumtheme.com/wp-content/uploads/2017/10/landscape-1468938413-star-trek-2017-logo-1080x540.jpg);">
+
+		    <article class="content-overlay">
+			<div class="content-overlay-grad"></div>
+			<div class="container-fluid rel">
+			    <div class="row rel">
+				<div class="col-sm-5 col-xs-5 rel">
+				    <div class="synopis-outer">
+					<div class="synopis-middle">
+					    <div class="synopis-inner">
+						<h2>Star Trek Series</h2>
+						<div class="synopis content">
+						    Created by Bryan Fuller and Alex Kurtzman for CBS All Access, the story of "Star <a class="show-more-content" data-id="1235">read more</a>												<ul class="hidden-xs">
+						    <li class="synopis-meta-spacer">Programs: <a href="http://streamiumtheme.com/programs/box-sets/">Box Sets</a>, <a href="http://streamiumtheme.com/programs/crime/">Crime</a>, <a href="http://streamiumtheme.com/programs/usa/">USA</a></li><li class="synopis-meta-spacer">Released: <a href="/?s=all&date=2017/10/09">October 9, 2017</a></li>												</ul>
+						</div>
+						
+						<div class="synopis-premium-meta hidden-xs">
+						    <a id="like-count-1235" class="streamium-review-like-btn streamium-btns streamium-reviews-btns" data-toggle="tooltip" title="CLICK TO LIKE!" data-id="1235" data-nonce="26e265e6ed">	0 Likes													</a>
+						    <a class="streamium-list-reviews streamium-btns streamium-reviews-btns" data-id="1235" data-nonce="26e265e6ed">Read reviews</a>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-sm-7 col-xs-7 rel">
+				    <a class="play-icon-wrap" href="http://streamiumtheme.com/tv/star-trek-series/">
+					<div class="play-icon-wrap-rel">
+					    <div class="play-icon-wrap-rel-ring"></div>
+					    <span class="play-icon-wrap-rel-play">
+						<i class="fa fa-play fa-3x brand-color" aria-hidden="true"></i>
+					    </span>
+					</div>
+				    </a>
+				</div>
+			    </div>
+			</div>
+		    </article><!--/.content-overlay-->
+
+		</div>
+
+		
+		
+		
+		<div style="background-image: url(http://streamiumtheme.com/wp-content/uploads/2017/10/maxresdefault-960x540.jpg);">
+
+		    <article class="content-overlay">
+			<div class="content-overlay-grad"></div>
+			<div class="container-fluid rel">
+			    <div class="row rel">
+				<div class="col-sm-5 col-xs-5 rel">
+				    <div class="synopis-outer">
+					<div class="synopis-middle">
+					    <div class="synopis-inner">
+						<h2>Trailer Park Boys</h2>
+						<div class="synopis content">
+						    Nova Scotia's trailer parks are colorful thanks to residents Ricky, Bubbles and Julian. Together, they <a class="show-more-content" data-id="1234">read more</a>												<ul class="hidden-xs">
+						    <li class="synopis-meta-spacer">Programs: <a href="http://streamiumtheme.com/programs/crime/">Crime</a>, <a href="http://streamiumtheme.com/programs/usa/">USA</a></li><li class="synopis-meta-spacer">Released: <a href="/?s=all&date=2017/10/09">October 9, 2017</a></li>												</ul>
+						</div>
+						
+						<div class="synopis-premium-meta hidden-xs">
+						    <a id="like-count-1234" class="streamium-review-like-btn streamium-btns streamium-reviews-btns" data-toggle="tooltip" title="CLICK TO LIKE!" data-id="1234" data-nonce="26e265e6ed">	0 Likes													</a>
+						    <a class="streamium-list-reviews streamium-btns streamium-reviews-btns" data-id="1234" data-nonce="26e265e6ed">Read reviews</a>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-sm-7 col-xs-7 rel">
+				    <a class="play-icon-wrap" href="http://streamiumtheme.com/tv/trailer-park-boys/">
+					<div class="play-icon-wrap-rel">
+					    <div class="play-icon-wrap-rel-ring"></div>
+					    <span class="play-icon-wrap-rel-play">
+						<i class="fa fa-play fa-3x brand-color" aria-hidden="true"></i>
+					    </span>
+					</div>
+				    </a>
+				</div>
+			    </div>
+			</div>
+		    </article><!--/.content-overlay-->
+
+		</div>
+
+		
+		
+		
+		<div style="background-image: url(http://streamiumtheme.com/wp-content/uploads/2017/10/House_of_Cards_main_characters.jpg);">
+
+		    <article class="content-overlay">
+			<div class="content-overlay-grad"></div>
+			<div class="container-fluid rel">
+			    <div class="row rel">
+				<div class="col-sm-5 col-xs-5 rel">
+				    <div class="synopis-outer">
+					<div class="synopis-middle">
+					    <div class="synopis-inner">
+						<h2>House Of Cards</h2>
+						<div class="synopis content">
+						    U.S. Rep. Francis Underwood of South Carolina starts out as a ruthless politician seeking revenge <a class="show-more-content" data-id="1233">read more</a>												<ul class="hidden-xs">
+						    <li class="synopis-meta-spacer">Programs: <a href="http://streamiumtheme.com/programs/box-sets/">Box Sets</a>, <a href="http://streamiumtheme.com/programs/crime/">Crime</a>, <a href="http://streamiumtheme.com/programs/usa/">USA</a></li><li class="synopis-meta-spacer">Released: <a href="/?s=all&date=2017/10/09">October 9, 2017</a></li>												</ul>
+						</div>
+						
+						<div class="synopis-premium-meta hidden-xs">
+						    <a id="like-count-1233" class="streamium-review-like-btn streamium-btns streamium-reviews-btns" data-toggle="tooltip" title="CLICK TO LIKE!" data-id="1233" data-nonce="26e265e6ed">	0 Likes													</a>
+						    <a class="streamium-list-reviews streamium-btns streamium-reviews-btns" data-id="1233" data-nonce="26e265e6ed">Read reviews</a>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-sm-7 col-xs-7 rel">
+				    <a class="play-icon-wrap" href="http://streamiumtheme.com/tv/house-of-cards/">
+					<div class="play-icon-wrap-rel">
+					    <div class="play-icon-wrap-rel-ring"></div>
+					    <span class="play-icon-wrap-rel-play">
+						<i class="fa fa-play fa-3x brand-color" aria-hidden="true"></i>
+					    </span>
+					</div>
+				    </a>
+				</div>
+			    </div>
+			</div>
+		    </article><!--/.content-overlay-->
+
+		</div>
+
+		
+		
+		
+		<div style="background-image: url(http://streamiumtheme.com/wp-content/uploads/2017/05/raydonovan02.jpg);">
+
+		    <article class="content-overlay">
+			<div class="content-overlay-grad"></div>
+			<div class="container-fluid rel">
+			    <div class="row rel">
+				<div class="col-sm-5 col-xs-5 rel">
+				    <div class="synopis-outer">
+					<div class="synopis-middle">
+					    <div class="synopis-inner">
+						<h2>Ray Donovan</h2>
+						<div class="synopis content">
+						    Ray Donovan is a "fixer" for Hollywood's elite. He is the go-to guy that the <a class="show-more-content" data-id="1167">read more</a>												<ul class="hidden-xs">
+						    <li class="synopis-meta-spacer">Programs: <a href="http://streamiumtheme.com/programs/crime/">Crime</a></li><li class="synopis-meta-spacer">Released: <a href="/?s=all&date=2017/10/08">October 8, 2017</a></li>												</ul>
+						</div>
+						
+						<div class="synopis-premium-meta hidden-xs">
+						    <a id="like-count-1167" class="streamium-review-like-btn streamium-btns streamium-reviews-btns" data-toggle="tooltip" title="CLICK TO LIKE!" data-id="1167" data-nonce="26e265e6ed">	0 Likes													</a>
+						    <a class="streamium-list-reviews streamium-btns streamium-reviews-btns" data-id="1167" data-nonce="26e265e6ed">Read reviews</a>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-sm-7 col-xs-7 rel">
+				    <a class="play-icon-wrap" href="http://streamiumtheme.com/tv/ray-donovan/">
+					<div class="play-icon-wrap-rel">
+					    <div class="play-icon-wrap-rel-ring"></div>
+					    <span class="play-icon-wrap-rel-play">
+						<i class="fa fa-play fa-3x brand-color" aria-hidden="true"></i>
+					    </span>
+					</div>
+				    </a>
+				</div>
+			    </div>
+			</div>
+		    </article><!--/.content-overlay-->
+
+		</div>
+
+		
+		
+		
+		<div style="background-image: url(http://streamiumtheme.com/wp-content/uploads/2017/10/eqnbskm8bgdz-1049x540.jpg);">
+
+		    <article class="content-overlay">
+			<div class="content-overlay-grad"></div>
+			<div class="container-fluid rel">
+			    <div class="row rel">
+				<div class="col-sm-5 col-xs-5 rel">
+				    <div class="synopis-outer">
+					<div class="synopis-middle">
+					    <div class="synopis-inner">
+						<h2>Justice League Comic Con</h2>
+						<div class="synopis content">
+						    Fueled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne <a class="show-more-content" data-id="1282">read more</a>												<ul class="hidden-xs">
+						    <li class="synopis-meta-spacer">Movies: <a href="http://streamiumtheme.com/movies/action/">Action</a>, <a href="http://streamiumtheme.com/movies/cult-films/">Cult Films</a>, <a href="http://streamiumtheme.com/movies/sci-fi/">Sci-Fi</a></li><li class="synopis-meta-spacer">Released: <a href="/?s=all&date=2017/10/09">October 9, 2017</a></li>												</ul>
+						</div>
+						
+						<div class="synopis-premium-meta hidden-xs">
+						    <a id="like-count-1282" class="streamium-review-like-btn streamium-btns streamium-reviews-btns" data-toggle="tooltip" title="CLICK TO LIKE!" data-id="1282" data-nonce="26e265e6ed">	0 Likes													</a>
+						    <a class="streamium-list-reviews streamium-btns streamium-reviews-btns" data-id="1282" data-nonce="26e265e6ed">Read reviews</a>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-sm-7 col-xs-7 rel">
+				    <a class="play-icon-wrap" href="http://streamiumtheme.com/movie/justice-league-comic-con/">
+					<div class="play-icon-wrap-rel">
+					    <div class="play-icon-wrap-rel-ring"></div>
+					    <span class="play-icon-wrap-rel-play">
+						<i class="fa fa-play fa-3x brand-color" aria-hidden="true"></i>
+					    </span>
+					</div>
+				    </a>
+				</div>
+			    </div>
+			</div>
+		    </article><!--/.content-overlay-->
+
+		</div>
+
+		
+	    </section><!--/.streamium-slider-->
+	    <div id="recently-watched"></div>
+
+	    <div id="custom-watched"></div>
+
+	    <div id="home-watched"></div>
+	    
+	</main><!--/.main content-->
+
+	<footer class="footer">
+	    <div class="container-fluid">
+		<div class="row">
+		    <div class="col-sm-12">
+			
+			<p class="copyright">Powered by <a href="https://s3bubble.com">S3Bubble.com</a></p>
+
+		    </div><!--/.col-sm-12-->
+		</div><!--/.row-->
+	    </div><!--/.container-->
+	</footer>
+
+	<div class="streamium-review-panel from-right">
+	    <header class="streamium-review-panel-header">
+		<h1>Reviews</h1>
+		<a href="#0" class="streamium-review-panel-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+	    </header>
+
+	    <div class="streamium-review-panel-container">
+		<div class="streamium-review-panel-content">
+		    
+		</div> <!-- streamium-review-panel-content -->
+	    </div> <!-- streamium-review-panel-container -->
+	</div> <!-- streamium-review-panel -->
+	<!-- </div> -->
+    <!-- 
+	 <div id="page_container" class="home blog"></div> -->
+    <script type='text/javascript'>
+     window.streamium_object={"ajax_url":"data","recently_watched_api_nonce":"d34ff64e9b","custom_api_nonce":"f59d5cc2f5","home_api_nonce":"ed0e87c2d2","tax_api_nonce":"886aaa51c2","search_api_nonce":"1e054b491d","extra_api_nonce":"df8841db40","query":null,"search":[],"is_home":"1","is_archive":"","is_tax":"","is_search":"","tile_count":"6","read_more":"read more","autoplay_slider":"1"};
+     
+     /* window.onhashchange = _page_render;
+      * window.onload = _page_render;
+
+      * function _page_render(){
+	var _hash = window.location.hash;
+	if(!_hash || _hash == "#" || _hash == "#/") _hash = "i";
+	nanoajax.ajax({url: './_' + _hash + '.html'}, function(_code, _res){
+	///	 console.log(_res);
+	morphdom(document.querySelector('#page_container'), _res);
+	//	     setTimeout(function(){
+	LazyLoad.js(['./js/streamium.js?ver=18', './js/s3bubble.js?ver=18']);
+	//	     }, 1000);
+	})
+      * }
+      */
+     
+    </script>
+    <script type='text/javascript' src='./js/streamium.js?ver=18'></script>
+    <script type='text/javascript' src='./js/s3bubble.js?ver=18'></script>
+
+		  		
+</body>
+</html>
