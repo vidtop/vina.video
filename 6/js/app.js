@@ -66,7 +66,7 @@ function _home_render(_gd_key, _cb) {
 				var _t111 = Object.assign(_e4,_e44[0]);
 				var _gd_key_id =  _e4.gd_key;
 				_t111.post = {ID:  _gd_key_id};
-				_t111.href = '#p/' +  _gd_key_id;
+				_t111.href = vidtop.config.domain + '/#p/' +  _gd_key_id;
 				_t111.link = _t111.href;
 				_t111.content = _t111.text;
 				_t111.post_id = _gd_key_id;
@@ -83,13 +83,13 @@ function _home_render(_gd_key, _cb) {
 			    val: {
 				meta: Object.assign(_e2, {
 				    count: _e3.length,
-				    home: '#',
-				    link: '#' + (_e2.type == 'channel'?'i/':'c/') + _e2.catSlug
+				    home: vidtop.config.domain + '/#',
+				    link: vidtop.config.domain +  '/#' + (_e2.type == 'channel'?'i/':'c/') + _e2.catSlug
 				}),
 				data:_e3.map(function(_t111){
 				    var _gd_key_id =  _e2.gd_key + '.' + _t111.id; 
 				    _t111.post = {ID:  _gd_key_id};
-				    _t111.href = '#p/' +  _gd_key_id;
+				    _t111.href = vidtop.config.domain +  '/#p/' +  _gd_key_id;
 				    _t111.link = _t111.href;
 				    _t111.content = _t111.text;
 				    _t111.post_id = _gd_key_id;
@@ -179,7 +179,7 @@ function _page_streamium_object(_hashesr, _cb) {
 		var _e22 =  _e2.map(function(_t111) {
 		    var _gd_key_id =  _gd_key + '.' + _t111.id;
 		    _t111.post = {ID:  _gd_key_id};
-		    _t111.href = '#p/' +  _gd_key_id;
+		    _t111.href = vidtop.config.domain +  '/#p/' +  _gd_key_id;
 		    _t111.link = _t111.href;
 		    _t111.content = _t111.text;
                     return _t111;
